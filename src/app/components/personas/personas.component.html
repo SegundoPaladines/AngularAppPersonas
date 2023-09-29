@@ -7,7 +7,12 @@
         (click)= 'agregarPersona()'
       >Agregar Persona</button>
       <br>
-      <p> {{mensaje}} </p>
+
+      <!--Ng if condicionales-->
+      <p *ngIf="mostrar; else sin_persona"> {{mensaje}} con el titulo de {{titulo}}</p>
+      <ng-template #sin_persona>
+        <p>No se ha agregado ninguna Persona</p>
+      </ng-template>
       <Persona></Persona>
       <label>Titulo Persona</label>
 

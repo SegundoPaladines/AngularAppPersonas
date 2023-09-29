@@ -10,11 +10,13 @@ import { Component } from "@angular/core";
 })
 export class PersonasComponent {
   deshabilitar = false;
-  titulo = 'bb';
-  mensaje = "No se ha agregado ninguna persona";
+  titulo = '';
+  mensaje = "";
+  mostrar = false;
 
   agregarPersona(){
     this.mensaje = "Persona agregada";
+    this.mostrar = true;
   }
 
   /* evento que solo es para property binding
